@@ -1,0 +1,55 @@
+.carouselContainer {
+  background-color: red;
+
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.carouselTrack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 10px;
+  background-color: violet;
+}
+
+.carouselItem {
+  width: 40%;
+  height: 500px;
+  background: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.carouselItem.moveUp {
+  animation: subir 0.5s ease-out forwards; /* Aplica la animación */
+  transform: translateY(-520px);
+}
+
+/* Animación que hace que la caja suba desde abajo */
+@keyframes subir {
+  0% {
+    transform: translateY(0px); /* Empieza 100px abajo */
+  }
+  100% {
+    transform: translateY(-520px); /* Termina en su posición original */
+  }
+}
+
+.carousel-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background: #e74c3c;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
