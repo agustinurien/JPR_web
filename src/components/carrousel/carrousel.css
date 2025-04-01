@@ -1,37 +1,28 @@
 .carouselContainer {
-  background-color: red;
-
-  height: 600px;
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   overflow: hidden;
-  padding: 20px;
 }
 
 .carouselTrack {
   display: flex;
   flex-direction: column;
   gap: 20px;
-
   padding: 10px;
-  background-color: violet;
 }
 
 .carouselItem {
-  width: 40%;
-  height: 500px;
-  background: #3498db;
+  background-color: black;
+  width: 100%;
+  height: 90vh;
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   border-radius: 5px;
-}
-
-.carouselItem.moveUp {
-  animation: subir 0.5s ease-out forwards; /* Aplica la animación */
-  transform: translateY(-520px);
+  transform: translateY(calc(-180vh - 40px));
 }
 
 /* Animación que hace que la caja suba desde abajo */
@@ -40,7 +31,9 @@
     transform: translateY(0px); /* Empieza 100px abajo */
   }
   100% {
-    transform: translateY(-520px); /* Termina en su posición original */
+    transform: translateY(
+      calc(-90vh - 20px)
+    ); /* Termina en su posición original */
   }
 }
 
@@ -48,8 +41,105 @@
   margin-top: 10px;
   padding: 8px 16px;
   border: none;
-  background: #e74c3c;
+
   color: white;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.eventImage {
+  width: 50%;
+  height: 100%;
+  background-color: aqua;
+}
+
+.eventImage.artistico {
+  background-image: url(../../../public/images/artistico.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.eventImage.boda {
+  background-image: url(../../../public/images/boda.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.eventImage.publico {
+  background-image: url(../../../public/images/publico.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.eventImage.corpo {
+  background-image: url(../../../public/images/corpo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.eventImage.convenciones {
+  background-image: url(../../../public/images/convenciones.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.eventContent {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.closeContainer {
+  background-color: #000000;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.eventText {
+  height: 100%;
+  width: 100%;
+  padding: 0px 40px;
+  box-sizing: border-box;
+}
+.eventTitle {
+  font-size: 4.5rem;
+  margin: 0px;
+  height: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 70%;
+}
+.eventDescription {
+  font-size: 1.3rem;
+  margin: 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+
+.contactContainer {
+  background-color: rgb(255, 255, 255);
+  padding: 30px 40px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  color: black;
+  box-sizing: border-box;
+}
+.contactText {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contactContainer h3 {
+  margin: 0px;
+  font-size: 2rem;
+  background-color: aqua;
 }

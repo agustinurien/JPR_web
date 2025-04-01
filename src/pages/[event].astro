@@ -1,0 +1,24 @@
+---
+
+import Carrousel from "../components/carrousel/Carrousel";
+import Layout from "../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+    return [
+        { params: { event: 1 } },
+        { params: { event: 2 } },
+        { params: { event: 3 } },
+        { params: { event: 4 } },
+        { params: { event: 5 } },
+        
+    ]
+}
+const { event } = Astro.params;
+
+---
+
+<Layout>
+    <main>
+        <Carrousel event={event} client:load/>
+    </main>
+</Layout>
