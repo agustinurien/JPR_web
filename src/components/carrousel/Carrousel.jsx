@@ -87,13 +87,20 @@ const Carrousel = ({ event }) => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // Verificamos si el item en index 3 está visible
+          console.log(
+            "Observando:",
+            entry.target.dataset.index,
+            "Visible:",
+            entry.isIntersecting
+          );
           if (entry.isIntersecting && entry.target.dataset.index === "3") {
+            console.log("Elemento 3 detectado");
             setTimeout(() => {
               setItems((prevItems) => {
+                console.log("Moviendo el primer elemento al final...");
                 return [...prevItems.slice(1), prevItems[0]];
               });
-            }, 3000); // Esperar 3 segundos
+            }, 3000);
           }
         });
       },
@@ -132,6 +139,7 @@ const Carrousel = ({ event }) => {
         {items.map((item, index) => (
           <div
             ref={(el) => (refs.current[index] = el)}
+            data-index={String(index)}
             style={{ backgroundColor: item.color }}
             key={index}
             className="carouselItem"
