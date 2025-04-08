@@ -8,11 +8,10 @@ import publico from "../../../public/images/publico.jpg";
 
 const Carrousel = ({ event }) => {
   const [items, setItems] = useState([]);
-  console.log(items);
   const [offsetY, setOffsetY] = useState(0);
   const getVH = (vh) => (window.innerHeight * vh) / 100;
-  const refs = useRef([]);
 
+  const trackRef = useRef(null);
   const originalItems = [
     {
       id: 1,
@@ -59,77 +58,37 @@ const Carrousel = ({ event }) => {
   ];
 
   useEffect(() => {
-    const handleOrder = () => {
-      const selectedEvent = Number(event);
-      const selected = originalItems.findIndex(
-        (item) => item.id === selectedEvent
-      );
-
-      if (selectedEvent !== -1) {
-        const n = originalItems.length;
-        const center = Math.floor(n / 2);
-        const shift = (selected - center + n) % n;
-
-        const reorderedItems = [
-          ...originalItems.slice(shift),
-          ...originalItems.slice(0, shift),
-        ];
-
-        setItems(reorderedItems);
-        console.log(reorderedItems);
-      }
-    };
-
-    handleOrder();
-  }, [event]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          console.log(
-            "Observando:",
-            entry.target.dataset.index,
-            "Visible:",
-            entry.isIntersecting
-          );
-          if (entry.isIntersecting && entry.target.dataset.index === "3") {
-            console.log("Elemento 3 detectado");
-            setTimeout(() => {
-              setItems((prevItems) => {
-                console.log("Moviendo el primer elemento al final...");
-                return [...prevItems.slice(1), prevItems[0]];
-              });
-            }, 3000);
-          }
-        });
-      },
-      { threshold: 0.5 }
+    const selectedEvent = Number(event);
+    const selected = originalItems.findIndex(
+      (item) => item.id === selectedEvent
     );
 
-    // Observar cada item
-    refs.current.forEach((el) => {
-      if (el) observer.observe(el);
-    });
+    if (selectedEvent !== -1) {
+      const n = originalItems.length;
+      const center = Math.floor(n / 2);
+      const shift = (selected - center + n) % n;
 
-    return () => {
-      refs.current.forEach((el) => {
-        if (el) observer.unobserve(el);
-      });
-    };
-  }, [items]);
+      const reorderedItems = [
+        ...originalItems.slice(shift),
+        ...originalItems.slice(0, shift),
+      ];
+
+      setItems(reorderedItems);
+    }
+  }, [event]);
 
   const moveUp = () => {
-    setOffsetY((prev) => prev - getVH(90) - 20);
+    setOffsetY((prev) => prev - getVH(80));
   };
 
   const moveDown = () => {
-    setOffsetY((prev) => prev + getVH(90) + 20);
+    setOffsetY((prev) => prev + getVH(80));
   };
 
   return (
     <div className="carouselContainer">
       <div
+        ref={trackRef}
         className="carouselTrack"
         style={{
           transform: `translateY(${offsetY}px)`,
@@ -138,8 +97,6 @@ const Carrousel = ({ event }) => {
       >
         {items.map((item, index) => (
           <div
-            ref={(el) => (refs.current[index] = el)}
-            data-index={String(index)}
             style={{ backgroundColor: item.color }}
             key={index}
             className="carouselItem"
@@ -148,9 +105,6 @@ const Carrousel = ({ event }) => {
 
             <div className="eventContent">
               <div className="closeContainer">
-                <a href="/" className="carouselButton">
-                  x
-                </a>
                 <button onClick={() => moveUp()}>A</button>
                 <button onClick={() => moveDown()}>V</button>
               </div>
@@ -166,7 +120,10 @@ const Carrousel = ({ event }) => {
               <div className="contactContainer">
                 <div className="contactText">
                   <span>Listo para el espectaculo</span>
-                  <h3>Contactate con nosotros</h3>
+                  <h3>
+                    Contactate <br />
+                    con nosotros
+                  </h3>
                 </div>
                 <button>enviar mensaje</button>
               </div>

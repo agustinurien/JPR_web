@@ -1,0 +1,219 @@
+---
+import heroImage from '../../public/images/AdobeStock_840575312.jpeg'
+import corpo from '../../public/images/corpo.jpg'
+import artistico from '../../public/images/artistico.jpg'
+import social from '../../public/images/boda.jpg'
+import convencion from '../../public/images/convenciones.jpg'
+import publico from '../../public/images/publico.jpg'
+import { GoArrowUpRight } from "react-icons/go";
+import { IoArrowDownCircleOutline } from "react-icons/io5";
+import Footer from './Layout/Footer.astro'
+---
+
+<main>
+	<div class="heroContainer">
+		
+		<div class="heroContent">
+			<div class="titulo">
+				<h1>Potenciamos tus espectáculos.</h1>
+				<p>Eventos de todo tipo.</p>
+			</div>
+			<div class="eventos">
+				<div class="eventoContainer">
+					<div class="eventoImgContainer">
+						<img src={corpo.src} alt="" class="eventoImg">
+					</div>
+					<div class="contentEvento">
+
+						<h2>Eventos Corporativos</h2>
+						<p class="textoEvento">Conferencias, lanzamientos
+							de productos, reuniones de
+							negocios, ferias comerciales y
+							eventos de networking.</p>
+							<a href="/1"><GoArrowUpRight/></a>
+						</div>
+				</div>
+				<div class="eventoContainer">
+					<div class="eventoImgContainer">
+						<img src={artistico.src} alt="" class="eventoImg">
+					</div>
+					<div class="contentEvento">
+
+						<h2>Espectaculos Artísticos</h2>
+						<p class="textoEvento">Conciertos, obras de teatro,
+							performances y festivales de
+							arte.</p>
+							<a href="/2"><GoArrowUpRight/></a>
+						</div>
+				</div>
+				<div class="eventoContainer">
+					<div class="eventoImgContainer">
+						<img src={social.src} alt="" class="eventoImg">
+					</div>
+					<div class="contentEvento">
+
+						<h2>Eventos <br> Sociales</h2>
+						<p class="textoEvento">Bodas, cumpleaños, fiestas
+							de aniversario y
+							celebraciones familiares.</p>
+							<a href="/3"><GoArrowUpRight/></a>
+						</div>
+				</div>
+				<div class="eventoContainer">
+					<div class="eventoImgContainer">
+						<img src={convencion.src} alt="" class="eventoImg">
+					</div>
+					<div class="contentEvento">
+
+						<h2>Convenciones <br> y Exposiciones</h2>
+						<p class="textoEvento">Exposiciones de productos,
+							ferias de empleo y eventos de
+							capacitación.</p>
+							<a href="/4"><GoArrowUpRight/></a>
+						</div>
+				</div>
+				<div class="eventoContainer">
+					<div class="eventoImgContainer">
+						<img src={publico.src} alt="" class="eventoImg">
+					</div>
+					<div class="contentEvento">
+
+						<h2>Espectáculos <br>Públicos</h2>
+						<p class="textoEvento">Festivales locales, ferias y
+							actividades de recaudación
+							de fondos.</p>
+							<a href="/5"><GoArrowUpRight/></a>
+						</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+</main>
+
+<style>
+	main{
+		background-color: black;
+		width: 100%;
+		height: 130vh;
+		background-image:
+		linear-gradient(to top, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0)),
+		url(../../public/images/AdobeStock_840575312.jpeg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+
+		padding-bottom: 150px;
+	}
+	.heroContainer{
+		
+		width: 100%;
+	}
+	.heroContent{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.titulo{
+		text-align: center;
+		color: white;
+		margin-bottom: 30px;
+
+	}
+	.titulo h1{
+		margin: 0px;
+		font-size: 3.5rem;
+	}
+	.titulo p{
+		margin: 0px;
+		
+	}
+	.arrow{
+		color: white;
+		font-size: 3rem;
+		padding: 40px;
+	}
+	.eventos{
+		width: fit-content;
+		
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+	}
+	.eventoContainer{
+		position: relative;
+		background-color: rgb(0, 0, 0);
+		border: 3px solid white;
+		border-radius: 40px;
+		width: 250px;
+		height: 600px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-end;
+		
+	}
+	.eventoImgContainer{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 60%;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+	}
+	.eventoImg{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: left;
+		z-index: 0;
+		border-radius: 40px 40px 0px 0px;
+
+	}
+	.contentEvento{
+		background-image: linear-gradient(to top, rgb(0, 0, 0) 75%, rgba(0, 0, 0, 0));
+		z-index: 1;
+		height: fit-content;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		gap: 20px;
+		padding: 0px 30px;
+		padding-bottom: 40px;
+		padding-top: 50px;
+		box-sizing: border-box;
+		border-radius: 0px 0px 40px 40px;
+
+	}
+	.eventoContainer .contentEvento h2{
+		margin: 0px;
+		color: white;
+		font-size: 1.7rem;
+	}
+	.eventoContainer .contentEvento .textoEvento{
+		color: white;
+		margin: 0px;
+		height: 100px;
+	}
+	.eventoContainer .contentEvento a{
+		color: rgb(0, 0, 0);
+		text-decoration: none;
+		background-color: rgb(255, 255, 255);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 50px;
+		width: 50px;
+		border-radius: 100%;
+		font-size: 1.5rem;
+	}
+</style>
