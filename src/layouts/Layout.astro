@@ -20,8 +20,35 @@ import Navbar from '../components/Layout/Navbar.astro';
 	</body>
 </html>
 
-<style>
+<style is:global>
+
 	body{
 		margin: 0;
 	}
+	@font-face {
+		font-family: 'PublicRegular', sans-serif;
+		src: url('/fonts/PublicSans-Regular.ttf') format('truetype');
+		font-weight: 400;
+		font-style: normal;
+	}
+	@font-face {
+  font-family: 'PublicBold';
+  src: url('/fonts/PublicSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PublicBlack';
+  src: url('/fonts/PublicSans-Black.ttf') format('truetype');
+  font-weight: 800; /* <-- Corregido: era font-size por error */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ChivoMonoSB';
+  src: url('/fonts/ChivoMono-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
 </style>

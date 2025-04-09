@@ -1,14 +1,15 @@
 ---
-import logoFooter from '../../../public/images/quienesSomos.png'
+import { Image } from 'astro:assets';
+import logoFooter from '../../assets/ISOTIPO.png'
 import { FaInstagram } from "react-icons/fa";
 ---
 
 <main>
     <div class="contenedorLogoFooter">
-        <img src={logoFooter.src} alt="logo">
-        <div class="textoFooter">
-            
-
+        <div class="logoImageContainer">
+            <Image src={logoFooter} alt="Logo" width={500} class="logoFooter"/>
+        </div>
+            <div class="textoFooter">
                 <p>Especialistas en producción
                     técnica para eventos, ofreciendo
                     soluciones integrales en sonido,
@@ -16,7 +17,6 @@ import { FaInstagram } from "react-icons/fa";
                     espectáculos corporativos,
                     artísticos y sociales.</p>
                     <a href=""><FaInstagram/></a>
-                
         </div>
     </div>
     <span>
@@ -42,45 +42,53 @@ import { FaInstagram } from "react-icons/fa";
         filter: grayscale(1);
     }
     .textoFooter{
-        width: 350px;
+        height: fit-content;
+        width: 50%;
         color: white;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
 
     }
     .textoFooter p{
-        padding-top: 40px;
-        width: 60%;
+        padding-bottom: 40px;
+        margin: 0px;
+        font-family: 'PublicRegular', sans-serif;
+        font-size: 1.5rem;
     }
     .contenedorLogoFooter{
-        position: relative;
         display: flex;
-        justify-content: flex-end;
-        width: 35%;
+        align-items: flex-end;
+        width: 500px;
         height: 80%;
     }
-    .contenedorLogoFooter img{
+    .logoImageContainer{
+        
+        width: 50%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .contenedorLogoFooter .logoImageContainer .logoFooter{
         width: 100%;
         height: 100%;
         object-fit: contain;
-        position: absolute;
-        top: 0;
-        left: 0;
     }
     a{
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: white;
-        height: 30px;
-        width: 30px;
+        height: 50px;
+        width: 50px;
         border-radius: 100%;
-        font-size: 1.4rem;
+        font-size: 2rem;
         color: black;
     }
     span{
-        color: white;
+        color: rgba(255, 255, 255, 0.558);
         margin-bottom: 40px;
+        font-family: 'PublicRegular', sans-serif;
     }
 </style>

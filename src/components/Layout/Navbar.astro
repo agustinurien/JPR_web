@@ -1,6 +1,5 @@
 ---
-import logo from '../../../public/images/logo.png'
-import { GoArrowUpRight } from "react-icons/go";
+import { GoArrowRight, GoArrowUpRight } from "react-icons/go";
 ---
     <nav>
         <div class="logo">
@@ -8,11 +7,11 @@ import { GoArrowUpRight } from "react-icons/go";
         </div>
         <ul>
             <li><a href="/">EVENTOS</a></li>
-            <li><a href="/servicios">QUIENES SOMOS</a></li>
-            <li><a href="/galeria">NUESTRO EQUIPAMIENTO</a></li>
+            <li><a href="/">QUIENES SOMOS</a></li>
+            <li><a href="/equipamiento">NUESTRO EQUIPAMIENTO</a></li>
             <li><div class="contacto">
-                <a href="">CONTACTO</a>
-                <a href="" class="arrow"><GoArrowUpRight/></a>
+                <a href="/">CONTACTO</a>
+                <a href="/" class="arrow"><GoArrowRight/></a>
             </div></li>
         </ul>
     </nav>
@@ -33,6 +32,8 @@ import { GoArrowUpRight } from "react-icons/go";
         padding: 0px 50px;
         box-sizing: border-box;
         z-index: 999;
+        font-family: 'ChivoMonoSB', sans-serif;
+        font-weight: 600;
 
     }
     .logo{
@@ -78,5 +79,6 @@ import { GoArrowUpRight } from "react-icons/go";
         text-decoration: none;
         color: white;
         font-size: 1rem;
+        letter-spacing: 0.1em;
     }
 </style>
