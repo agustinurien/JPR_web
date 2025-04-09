@@ -3,6 +3,8 @@ import { Image } from "astro:assets";
 import Footer from "../components/Layout/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 import luces from "../assets/luces.jpeg";
+
+import { GoArrowRight, GoArrowUpRight } from "react-icons/go";
 ---
 <Layout>
     <main>
@@ -27,7 +29,7 @@ import luces from "../assets/luces.jpeg";
                     ambientación y shows
                     en vivo.</p>
             </div>
-            <div>
+            <div class="equipamientoContent">
                 <h2>Sonido</h2>
                 <p>Sistemas de audio
                     profesional con
@@ -37,14 +39,14 @@ import luces from "../assets/luces.jpeg";
                     conciertos y
                     conferencias.</p>
             </div>
-            <div>
+            <div class="equipamientoContent">
                 <h2>Pantalla</h2>
                 <p>Pantallas LED de alta
                     resolución para
                     proyecciones, visuales y
                     contenido multimedia.</p>
             </div>
-            <div>
+            <div class="equipamientoContent">
                 <h2>Estructura</h2>
                 <p>Trusses, escenarios
                     modulares y
@@ -52,7 +54,7 @@ import luces from "../assets/luces.jpeg";
                     personalizadas para
                     todo tipo de eventos.</p>
             </div>
-            <div>
+            <div class="equipamientoContent">
                 <h2>Energia</h2>
                 <p>Generadores y sistemas
                     de respaldo para
@@ -63,9 +65,15 @@ import luces from "../assets/luces.jpeg";
             </div>
             
         </div>
-
-        <div>
-
+            
+        <div class="disclaimer">
+            <div class="disclaimerContent">
+                <div>
+                    <GoArrowRight/>
+                </div>
+                <p>Nuestro equipo de profesionales se encarga de la instalación, operación y supervisión técnica, asegurando que cada elemento funcione a la perfección. Con JPR Técnicas para
+                    Espectáculos, tu evento estará respaldado por tecnología de vanguardia y una ejecución impecable.</p>
+            </div>
         </div>
     </main>
     <Footer/>
@@ -117,10 +125,49 @@ import luces from "../assets/luces.jpeg";
         font-family: 'PublicRegular', sans-serif;
         font-size: 0.9rem;
     }
+    .equipamientoContentContainer{
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 30px 0px;
+        gap: 20px;
+    }
     .equipamientoContent{
-        background-color: rgb(13, 255, 0);
+        color: white;
+        width: 220px;
+        height: 200px;
+        border: 2px solid white;
+        border-radius: 30px;
+        padding: 20px;
+        box-sizing: border-box;
     }
     .equipamientoContent h2{
+        margin: 0px;
+    }
+    .disclaimer{
+        color: white;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .disclaimerContent{
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        width: 65%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-family: 'PublicRegular', sans-serif;
+        font-size: 0.9rem;
+    }
+    .disclaimerContent p{
         margin: 0px;
     }
 
