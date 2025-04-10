@@ -217,9 +217,10 @@ import { Image } from 'astro:assets'
 		font-size: 0.8rem;
 	}
 	.eventoContainer .contentEvento a{
-		color: rgb(0, 0, 0);
 		text-decoration: none;
-		background-color: rgb(255, 255, 255);
+		color: rgb(255, 255, 255);
+		background-color: rgb(0, 0, 0);
+		border: 1px solid white;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -227,5 +228,10 @@ import { Image } from 'astro:assets'
 		width: 50px;
 		border-radius: 100%;
 		font-size: 1.5rem;
+	}
+	.eventoContainer .contentEvento a:hover{
+		color: black;
+		background-color: white;
+
 	}
 </style>

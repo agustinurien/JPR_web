@@ -3,8 +3,10 @@ import { Image } from "astro:assets";
 import Footer from "../components/Layout/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 import luces from "../assets/luces.jpeg";
+import fondo from "../assets/fondo.jpeg";
 
 import { GoArrowRight, GoArrowUpRight } from "react-icons/go";
+import { FaInstagram } from "react-icons/fa";
 ---
 <Layout>
     <main>
@@ -68,15 +70,20 @@ import { GoArrowRight, GoArrowUpRight } from "react-icons/go";
             
         <div class="disclaimer">
             <div class="disclaimerContent">
-                <div>
+                <div class="disclaimerIcon">
                     <GoArrowRight/>
                 </div>
                 <p>Nuestro equipo de profesionales se encarga de la instalación, operación y supervisión técnica, asegurando que cada elemento funcione a la perfección. Con JPR Técnicas para
                     Espectáculos, tu evento estará respaldado por tecnología de vanguardia y una ejecución impecable.</p>
             </div>
         </div>
+        <div class="contenedorBarandillaFooter">
+            <div class="barandillaImageContainer">
+                <Image src={fondo} alt="Logo" width={2000} class="barandilla"/>
+            </div>
+        </div>
     </main>
-    <Footer/>
+    <Footer />
 </Layout>
 
 <style>
@@ -103,7 +110,7 @@ import { GoArrowRight, GoArrowUpRight } from "react-icons/go";
         width: 100%;
         height: 100%;
         object-fit: cover;
-        
+        object-position: top;
 
     }
     .titulos{
@@ -113,17 +120,21 @@ import { GoArrowRight, GoArrowUpRight } from "react-icons/go";
         flex-direction: column;
         z-index: 1;
         color: white;
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.931), rgba(0, 0, 0, 0));
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.931) 10%, rgba(0, 0, 0, 0));
         width: 100%;
+        padding-bottom: 20px;
     }
     .titulos h1{
         font-family: 'PublicBlack', sans-serif;
         margin: 0px;
-        font-size: 2.8rem;
+        font-size: 2.9rem;
+        padding-top: 100px;
     }
     .titulos p{
         font-family: 'PublicRegular', sans-serif;
         font-size: 0.9rem;
+        margin: 0px;
+        padding-top: 5px;
     }
     .equipamientoContentContainer{
         background-color: #000;
@@ -146,6 +157,11 @@ import { GoArrowRight, GoArrowUpRight } from "react-icons/go";
     }
     .equipamientoContent h2{
         margin: 0px;
+        font-family: 'PublicBold', sans-serif;
+    }
+    .equipamientoContent p{
+        font-family: 'PublicRegular', sans-serif;
+        font-size: 0.9rem;
     }
     .disclaimer{
         color: white;
@@ -167,8 +183,47 @@ import { GoArrowRight, GoArrowUpRight } from "react-icons/go";
         font-family: 'PublicRegular', sans-serif;
         font-size: 0.9rem;
     }
+    .disclaimerIcon{
+        border: 1px solid white;
+        border-radius: 100%;
+        width: 48px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .disclaimerContent p{
         margin: 0px;
+    }
+
+    .contenedorBarandillaFooter{
+        background-color: #000;
+        padding-top: 50px;
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        
+    }
+    .barandillaImageContainer{
+        position: relative;
+        height: 100%;
+    }
+    .barandillaImageContainer::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top, rgb(0, 0, 0), transparent 40%),
+                        linear-gradient(to bottom, rgb(0, 0, 0), transparent 40%);
+        height: 100%;
+    }
+    .barandillaImageContainer .barandilla{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom;
     }
 
 </style>

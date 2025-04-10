@@ -78,12 +78,10 @@ const Carrousel = ({ event }) => {
 
     if (selectedEvent !== -1) {
       const n = originalItems.length;
-      const center = Math.floor(n / 2);
-      const shift = (selected - center + n) % n;
 
       const reorderedItems = [
-        ...originalItems.slice(shift),
-        ...originalItems.slice(0, shift),
+        ...originalItems.slice(selected),
+        ...originalItems.slice(0, selected),
       ];
 
       setItems(reorderedItems);
@@ -109,12 +107,12 @@ const Carrousel = ({ event }) => {
   const moveTop = (n) => {
     console.log("se aplico el movimiento");
     console.log(n, items.length - 1);
-    const maxOffset = getVH(80) * 2;
+    const maxOffset = 0;
     setOffsetY(maxOffset);
   };
   const moveBottom = (n) => {
     console.log(n, 0);
-    const maxOffset = getVH(80) * 2;
+    const maxOffset = getVH(80) * 4;
     setOffsetY(-maxOffset);
   };
 

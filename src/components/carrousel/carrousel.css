@@ -20,8 +20,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 5px;
-  transform: translateY(calc(-160vh));
 }
 
 .carousel-button {
@@ -43,7 +41,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 5px;
 }
 .eventImageContainer .eventImage.corpo {
   object-position: left;
@@ -87,6 +84,15 @@
   background-color: transparent;
   cursor: pointer;
 }
+.closeContainer a:hover {
+  background-color: white;
+  color: black;
+}
+
+.closeContainer button:hover {
+  background-color: white;
+  color: black;
+}
 .closeContainer a {
   display: flex;
   justify-content: center;
@@ -112,7 +118,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 70%;
+  width: 100%;
   font-family: "PublicBlack", sans-serif;
 }
 .eventDescription {
@@ -120,7 +126,7 @@
   margin: 0px;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   gap: 30px;
   font-family: "PublicRegular", sans-serif;
 }
@@ -179,4 +185,113 @@
   color: white;
   padding: 7px 7px;
   border-radius: 100%;
+}
+@media screen and (max-width: 1500px) {
+  .eventTitle {
+    padding: 20px 0px;
+    font-size: 2.8rem;
+    width: 100%;
+    height: fit-content;
+  }
+  .eventDescription {
+    align-items: flex-start;
+  }
+  .eventDescription p {
+    margin: 0px;
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .closeContainer {
+    padding: 0px 20px;
+  }
+  .closeContainer button {
+    width: 40px;
+    height: 40px;
+  }
+  .closeContainer a {
+    width: 40px;
+    height: 40px;
+  }
+  .contactContainer h3 {
+    font-size: 1.5rem;
+  }
+  .eventTitle {
+    padding: 20px 0px;
+    font-size: 2.4rem;
+    width: 100%;
+    height: fit-content;
+  }
+  .eventText {
+    padding: 0px 20px;
+  }
+  .eventDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: fit-content;
+    gap: 10px;
+  }
+  .eventDescription p {
+    margin: 0px;
+    width: 100%;
+    font-size: 1rem;
+  }
+  .contactContainer {
+    background-color: rgb(255, 255, 255);
+    padding: 20px 20px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .wpButton {
+    display: none;
+  }
+  .whatsappIcon {
+    font-size: 2rem;
+  }
+  span {
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .closeContainer {
+    display: none;
+  }
+  .carouselContainer {
+    overflow: scroll;
+  }
+  .eventImageContainer {
+    width: 100%;
+    height: 100%;
+  }
+  .carouselItem {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(calc(0vh));
+  }
+  .eventContent {
+    width: 100%;
+  }
+  .eventText {
+    width: 100%;
+    height: 100%;
+    padding: 40px 50px;
+  }
+  .eventTitle {
+    height: fit-content;
+    padding: 20px 0px;
+    padding-top: 0px;
+    font-size: 2rem;
+  }
+  .eventDescription {
+    padding-bottom: 20px;
+  }
+  .eventDescription p {
+    width: 100%;
+    font-size: 0.8rem;
+  }
 }
