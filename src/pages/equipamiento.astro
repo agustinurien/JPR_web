@@ -174,26 +174,31 @@ import { FaInstagram } from "react-icons/fa";
     .disclaimerContent{
         border-top: 2px solid white;
         border-bottom: 2px solid white;
-        width: 65%;
-        height: 80px;
+        width: 1120px;
+        height: fit-content;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 20px;
+        gap: 10px;
         font-family: 'PublicRegular', sans-serif;
-        font-size: 0.9rem;
+        font-size: 0.9rem;      
+        padding: 20px 20px;
+            
+            
     }
     .disclaimerIcon{
         border: 1px solid white;
         border-radius: 100%;
-        width: 48px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         display: flex;
         justify-content: center;
         align-items: center;
+
     }
     .disclaimerContent p{
         margin: 0px;
+        width: 90%;
     }
 
     .contenedorBarandillaFooter{
@@ -225,5 +230,26 @@ import { FaInstagram } from "react-icons/fa";
         object-fit: cover;
         object-position: bottom;
     }
-
+    @media screen and (max-width: 1024px) {
+        .equipamientoContentContainer{
+            padding-bottom: 60px;
+        }
+        .disclaimerContent{
+            width: 85%;
+            height: fit-content;
+            padding: 20px 20px;
+            gap: 0px;
+            justify-content: space-between;
+        }
+        .disclaimerContent p{
+            width: 90%;
+        }
+        .disclaimerIcon{
+        
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        
+    }
+    }
 </style>

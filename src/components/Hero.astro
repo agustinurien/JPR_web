@@ -95,7 +95,7 @@ import { Image } from 'astro:assets'
 	main{
 		background-color: black;
 		width: 100%;
-		height: 130vh;
+		height: fit-content;
 		background-image:
 		linear-gradient(to top, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0)),
 		url(../../public/images/AdobeStock_840575312.jpeg);
@@ -103,21 +103,24 @@ import { Image } from 'astro:assets'
 		background-position: center;
 		background-repeat: no-repeat;
 		display: flex;
-		align-items: flex-end;
+		align-items: flex-start;
 		justify-content: center;
 
 		padding-bottom: 150px;
 	}
 	.heroContainer{
+		margin-top: 50vh;
+		padding: 20px 0px;
 		
 		width: 100%;
 	}
 	.heroContent{
 		width: 100%;
+		
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-start;
 	}
 	.titulo{
 		text-align: center;
@@ -142,10 +145,10 @@ import { Image } from 'astro:assets'
 		padding: 40px;
 	}
 	.eventos{
-		width: fit-content;
-		
+		height: auto;
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 		gap: 20px;
 	}
 	.eventoContainer{
@@ -234,4 +237,87 @@ import { Image } from 'astro:assets'
 		background-color: white;
 
 	}
+
+	@media screen and (max-width: 1024px) {
+        .eventoContainer{
+		width: 280px;
+		height: 400px;
+		
+	}
+	.contentEvento{
+		gap: 10px;
+		padding: 0px 20px;
+		padding-bottom: 20px;
+		padding-top: 30px;
+
+	}
+	.eventoContainer .contentEvento .textoEvento{
+		color: white;
+		margin: 0px;
+		height: 80px;
+		font-family: 'PublicRegular', sans-serif;
+		font-weight: 400;
+		font-size: 0.8rem;
+	}
+
+        .titulo h1{
+		margin: 0px;
+		font-size: 2.5rem;
+		font-family: 'PublicBlack', sans-serif;
+		font-weight: 900;
+	}
+	.titulo p{
+		margin: 0px;
+		font-family: 'PublickRegular', sans-serif;
+		font-weight: 400;
+	}
+    }
+    @media screen and (max-width: 768px) {
+		main{
+			padding-bottom: 50px;
+		}
+		.heroContainer{
+			margin-top: 200px;
+		}
+		.titulo h1{
+			font-size: 2rem;
+			padding-bottom: 10px;
+		}
+        .eventos{
+			flex-direction: column;
+			align-items: center;
+
+		}
+		.eventoContainer{
+			width: 90%;
+			height: 350px;
+		}
+		.contentEvento{
+			width: 100%;
+		}
+		.eventoContainer .contentEvento .textoEvento{
+		font-size: 1.1rem;
+	}
+		
+	
+	.eventoContainer .contentEvento a{
+		background-color: rgb(255, 255, 255);
+		color: black;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 35px;
+		width: 35px;
+		border-radius: 20px;
+		font-size: 1rem;
+		
+	}
+	.eventoContainer .contentEvento a:hover{
+		color: rgb(255, 255, 255);
+		background-color: rgb(0, 0, 0);
+
+	}
+	
+        
+}
 </style>
