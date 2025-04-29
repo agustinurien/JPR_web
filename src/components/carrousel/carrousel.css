@@ -112,9 +112,9 @@
   box-sizing: border-box;
 }
 .eventTitle {
-  font-size: 4.5rem;
+  font-size: 4rem;
   margin: 0px;
-  height: 200px;
+  height: 100px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
