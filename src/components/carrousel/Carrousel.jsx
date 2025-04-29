@@ -173,10 +173,13 @@ const Carrousel = ({ event }) => {
                   </h3>
                 </div>
                 <div className="contactButtons">
-                  <a href="/" className="wpButton">
+                  <a href="https://wa.me/5491150169540" className="wpButton">
                     ENVIAR MENSAJE
                   </a>
-                  <a href="/" className="whatsappIcon">
+                  <a
+                    href="https://wa.me/5491150169540"
+                    className="whatsappIcon"
+                  >
                     <FaWhatsapp />
                   </a>
                 </div>
