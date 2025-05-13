@@ -54,6 +54,11 @@
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0) 80%,
+    rgb(28, 28, 28)
+  );
 }
 
 .closeContainer {
@@ -134,58 +139,6 @@
   width: 50%;
 }
 
-.contactContainer {
-  background-color: rgb(255, 255, 255);
-  padding: 30px 40px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  color: black;
-  box-sizing: border-box;
-}
-.contactText {
-  width: 52%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  font-family: "PublicRegular", sans-serif;
-  font-size: 0.8rem;
-  gap: 10px;
-}
-.contactContainer h3 {
-  margin: 0px;
-  font-size: 2rem;
-  font-family: "PublicBlack", sans-serif;
-}
-.contactButtons {
-  display: flex;
-}
-.wpButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #7ac942;
-  color: white;
-  padding: 7px 15px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  font-family: "ChivoMonoSB", sans-serif;
-  font-size: 0.9rem;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-}
-.whatsappIcon {
-  font-size: 1.3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #7ac942;
-  color: white;
-  padding: 7px 7px;
-  border-radius: 100%;
-}
 @media screen and (max-width: 1500px) {
   .eventTitle {
     padding: 20px 0px;

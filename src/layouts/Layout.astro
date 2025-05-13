@@ -1,4 +1,5 @@
 ---
+import { FaWhatsapp } from 'react-icons/fa';
 import Footer from '../components/Layout/Footer.astro';
 import Navbar from '../components/Layout/Navbar.astro';
 ---
@@ -16,7 +17,11 @@ import Navbar from '../components/Layout/Navbar.astro';
 	<body>
 		<Navbar />
 		<slot />
-		
+		<div class="contactContainer">
+			<a href="https://wa.me/5491150169540" class="whatsappIcon">
+			  <FaWhatsapp />
+			</a>
+		  </div>
 	</body>
 </html>
 
@@ -25,9 +30,33 @@ import Navbar from '../components/Layout/Navbar.astro';
 		scroll-behavior: smooth;
 	}
 	body{
-		
+		position: relative;
 		margin: 0;
 	}
+
+	.contactContainer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 150px 40px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: black;
+  box-sizing: border-box;
+}
+.whatsappIcon {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7ac942;
+  color: white;
+  padding: 15px 15px;
+  border-radius: 100%;
+}
+
 	@font-face {
 		font-family: 'PublicRegular', sans-serif;
 		src: url('/fonts/PublicSans-Regular.ttf') format('truetype');
