@@ -28,7 +28,7 @@ import imageBackground from "../assets/AdobeStock_840575312.jpeg";
       </div>
 
       <div class="eventos">
-        <div class="eventoContainer">
+        <div class="eventoContainer" data-href="/1s">
           <div class="eventoImgContainer">
             <Image
               src={corpo}
@@ -47,7 +47,7 @@ import imageBackground from "../assets/AdobeStock_840575312.jpeg";
           </div>
         </div>
 
-        <div class="eventoContainer">
+        <div class="eventoContainer" data-href="/2">
           <div class="eventoImgContainer">
             <Image
               src={artistico}
@@ -65,7 +65,7 @@ import imageBackground from "../assets/AdobeStock_840575312.jpeg";
           </div>
         </div>
 
-        <div class="eventoContainer">
+        <div class="eventoContainer" data-href="/3">
           <div class="eventoImgContainer">
             <Image src={social} alt="social" width={1000} class="eventoImg" />
           </div>
@@ -79,7 +79,7 @@ import imageBackground from "../assets/AdobeStock_840575312.jpeg";
           </div>
         </div>
 
-        <div class="eventoContainer">
+        <div class="eventoContainer" data-href="/4">
           <div class="eventoImgContainer">
             <Image
               src={convencion}
@@ -98,7 +98,7 @@ import imageBackground from "../assets/AdobeStock_840575312.jpeg";
           </div>
         </div>
 
-        <div class="eventoContainer">
+        <div class="eventoContainer" data-href="/5">
           <div class="eventoImgContainer">
             <Image src={publico} alt="publico" width={1000} class="eventoImg" />
           </div>
@@ -114,6 +114,16 @@ import imageBackground from "../assets/AdobeStock_840575312.jpeg";
     </div>
   </div>
 </main>
+
+<script>
+  document.querySelectorAll(".eventoContainer").forEach((container) => {
+    container.addEventListener("click", () => {
+      const href = container.getAttribute("data-href");
+      if (href) window.location.href = href;
+    });
+    container.style.cursor = "pointer"; // opcional, cambia el cursor a "manito"
+  });
+</script>
 
 <style>
   main {
@@ -204,7 +214,7 @@ import imageBackground from "../assets/AdobeStock_840575312.jpeg";
   .eventoContainer {
     position: relative;
     background-color: rgb(0, 0, 0);
-    border: 3px solid white;
+    border: 1px solid white;
     border-radius: 40px;
     width: 250px;
     height: 600px;
@@ -212,6 +222,12 @@ import imageBackground from "../assets/AdobeStock_840575312.jpeg";
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
+  }
+
+  .eventoContainer:hover {
+    transform: scale(1.01);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
   }
   .eventoImgContainer {
     position: absolute;
