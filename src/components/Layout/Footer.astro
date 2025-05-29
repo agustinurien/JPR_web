@@ -2,30 +2,42 @@
 
 ---
 
-<div>
-    <span>
-        2025 | Copyright | Juan Pablo Recio Producciones, Todos los derchos reservados
-    </span>
+<div class="footer">
+  <span>
+    2025 | Copyright | Juan Pablo Recio Producciones, Todos los derchos
+    reservados
+  </span>
+  <div class="footerText">
+    <span> Desarrollado por TAPE Producciones </span>
+  </div>
 </div>
 
 <style>
-    div{
-        background-color: black;
-        height: 100px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  .footer {
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerText {
+    margin-top: 10px;
+  }
+  .footerText span {
+    color: rgba(255, 255, 255, 0.39);
+    font-family: "PublicRegular", sans-serif;
+    font-size: 0.8rem;
+  }
+  span {
+    color: rgba(255, 255, 255, 0.558);
+    font-family: "PublicRegular", sans-serif;
+  }
+  @media screen and (max-width: 768px) {
+    span {
+      text-align: center;
+      font-size: 0.7rem;
     }
-    span{
-        color: rgba(255, 255, 255, 0.558);
-        font-family: 'PublicRegular', sans-serif;
-    }
-    @media screen and (max-width: 768px) {
-        span{
-            text-align: center;
-            font-size: 0.7rem;
-        }
-        
-    }
+  }
 </style>

@@ -1,323 +1,372 @@
 ---
-import corpo from '../assets/corpo.jpg'
-import artistico from '../assets/artistico.jpg'
-import social from '../assets/boda.jpg'
-import convencion from '../assets/convenciones.jpg'
-import publico from '../assets/publico.jpg'
+import corpo from "../assets/corpo.jpg";
+import artistico from "../assets/artistico.jpg";
+import social from "../assets/boda.jpg";
+import convencion from "../assets/convenciones.jpg";
+import publico from "../assets/publico.jpg";
 
 import { GoArrowUpRight } from "react-icons/go";
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
+
+import imageBackground from "../assets/AdobeStock_840575312.jpeg";
 ---
 
 <main>
-	<div class="heroContainer">
-		
-		<div class="heroContent">
-			<div class="titulo">
-				<h1>Potenciamos tus espectáculos.</h1>
-				<p>Eventos de todo tipo.</p>
-			</div>
-			<div class="eventos">
-				<div class="eventoContainer">
-					<div class="eventoImgContainer">
-						<Image src={corpo} alt="corporativo" width={1000} class="eventoImg corpo">
-					</div>
-					<div class="contentEvento">
+  <div class="backgroundImageContainer">
+    <Image
+      src={imageBackground}
+      alt="background"
+      width={3000}
+      class="background"
+    />
+  </div>
+  <div class="heroContainer">
+    <div class="heroContent">
+      <div class="titulo">
+        <h1>Potenciamos tus espectáculos.</h1>
+        <p>Eventos de todo tipo.</p>
+      </div>
 
-						<h2>Eventos Corporativos</h2>
-						<p class="textoEvento">Conferencias, lanzamientos
-							de productos, reuniones de
-							negocios, ferias comerciales y
-							eventos de networking.</p>
-							<a href="/1"><GoArrowUpRight/></a>
-						</div>
-				</div>
-				<div class="eventoContainer">
-					<div class="eventoImgContainer">
-						<Image src={artistico} alt="artitico" width={1000}  class="eventoImg">
-					</div>
-					<div class="contentEvento">
+      <div class="eventos">
+        <div class="eventoContainer">
+          <div class="eventoImgContainer">
+            <Image
+              src={corpo}
+              alt="corporativo"
+              width={1000}
+              class="eventoImg corpo"
+            />
+          </div>
+          <div class="contentEvento">
+            <h2>Eventos Corporativos</h2>
+            <p class="textoEvento">
+              Conferencias, lanzamientos de productos, reuniones de negocios,
+              ferias comerciales y eventos de networking.
+            </p>
+            <a href="/1"><GoArrowUpRight /></a>
+          </div>
+        </div>
 
-						<h2>Espectaculos Artísticos</h2>
-						<p class="textoEvento">Conciertos, obras de teatro,
-							performances y festivales de
-							arte.</p>
-							<a href="/2"><GoArrowUpRight/></a>
-						</div>
-				</div>
-				<div class="eventoContainer">
-					<div class="eventoImgContainer">
-						<Image src={social} alt="social" width={1000}  class="eventoImg ">
-					</div>
-					<div class="contentEvento">
+        <div class="eventoContainer">
+          <div class="eventoImgContainer">
+            <Image
+              src={artistico}
+              alt="artitico"
+              width={1000}
+              class="eventoImg"
+            />
+          </div>
+          <div class="contentEvento">
+            <h2>Espectaculos Artísticos</h2>
+            <p class="textoEvento">
+              Conciertos, obras de teatro, performances y festivales de arte.
+            </p>
+            <a href="/2"><GoArrowUpRight /></a>
+          </div>
+        </div>
 
-						<h2>Eventos <br> Sociales</h2>
-						<p class="textoEvento">Bodas, cumpleaños, fiestas
-							de aniversario y
-							celebraciones familiares.</p>
-							<a href="/3"><GoArrowUpRight/></a>
-						</div>
-				</div>
-				<div class="eventoContainer">
-					<div class="eventoImgContainer">
-						<Image src={convencion} alt="convenciones" width={1000}  class="eventoImg ">
-					</div>
-					<div class="contentEvento">
+        <div class="eventoContainer">
+          <div class="eventoImgContainer">
+            <Image src={social} alt="social" width={1000} class="eventoImg" />
+          </div>
+          <div class="contentEvento">
+            <h2>Eventos <br /> Sociales</h2>
+            <p class="textoEvento">
+              Bodas, cumpleaños, fiestas de aniversario y celebraciones
+              familiares.
+            </p>
+            <a href="/3"><GoArrowUpRight /></a>
+          </div>
+        </div>
 
-						<h2>Convenciones <br> y Exposiciones</h2>
-						<p class="textoEvento">Exposiciones de productos,
-							ferias de empleo y eventos de
-							capacitación.</p>
-							<a href="/4"><GoArrowUpRight/></a>
-						</div>
-				</div>
-				<div class="eventoContainer">
-					<div class="eventoImgContainer">
-						<Image src={publico} alt="publico" width={1000} class="eventoImg ">
-					</div>
-					<div class="contentEvento">
+        <div class="eventoContainer">
+          <div class="eventoImgContainer">
+            <Image
+              src={convencion}
+              alt="convenciones"
+              width={1000}
+              class="eventoImg"
+            />
+          </div>
+          <div class="contentEvento">
+            <h2>Convenciones <br /> y Exposiciones</h2>
+            <p class="textoEvento">
+              Exposiciones de productos, ferias de empleo y eventos de
+              capacitación.
+            </p>
+            <a href="/4"><GoArrowUpRight /></a>
+          </div>
+        </div>
 
-						<h2>Espectáculos <br>Públicos</h2>
-						<p class="textoEvento">Festivales locales, ferias y
-							actividades de recaudación
-							de fondos.</p>
-							<a href="/5"><GoArrowUpRight/></a>
-						</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-	
+        <div class="eventoContainer">
+          <div class="eventoImgContainer">
+            <Image src={publico} alt="publico" width={1000} class="eventoImg" />
+          </div>
+          <div class="contentEvento">
+            <h2>Espectáculos <br />Públicos</h2>
+            <p class="textoEvento">
+              Festivales locales, ferias y actividades de recaudación de fondos.
+            </p>
+            <a href="/5"><GoArrowUpRight /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 
 <style>
-	main{
-		background-color: black;
-		width: 100%;
-		height: fit-content;
-		background-image:
-		linear-gradient(to top, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0)),
-		url(../../public/images/AdobeStock_840575312.jpeg);
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		display: flex;
-		align-items: flex-start;
-		justify-content: center;
+  main {
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: fit-content;
 
-		padding-bottom: 150px;
-	}
-	.heroContainer{
-		margin-top: 25vh;
-		padding: 20px 0px;
-		
-		width: 100%;
-	}
-	.heroContent{
-		width: 100%;
-		
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: flex-start;
-	}
-	.titulo{
-		text-align: center;
-		color: white;
-		margin-bottom: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 
-	}
-	.titulo h1{
-		margin: 0px;
-		font-size: 3.5rem;
-		font-family: 'PublicBlack', sans-serif;
-		font-weight: 900;
-	}
-	.titulo p{
-		margin: 0px;
-		font-family: 'PublickRegular', sans-serif;
-		font-weight: 400;
-	}
-	.arrow{
-		color: white;
-		font-size: 3rem;
-		padding: 40px;
-	}
-	.eventos{
-		height: auto;
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-		gap: 20px;
-	}
-	.eventoContainer{
-		position: relative;
-		background-color: rgb(0, 0, 0);
-		border: 3px solid white;
-		border-radius: 40px;
-		width: 250px;
-		height: 600px;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: flex-end;
-		
-	}
-	.eventoImgContainer{
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		width: 100%;
-		height: 60%;
-		display: flex;
-		align-items: flex-end;
-		justify-content: flex-start;
-	}
-	.eventoImg{
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
-		z-index: 0;
-		border-radius: 40px 40px 0px 0px;
+    padding-bottom: 150px;
+  }
+  .backgroundImageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    z-index: 0;
+    padding-top: 50px;
+  }
+  .backgroundImageContainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgb(0, 0, 0)
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+  .background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .heroContainer {
+    margin-top: 25vh;
+    padding: 20px 0px;
 
-	}
-	.eventoImg.corpo{
-		object-position: left;
+    width: 100%;
+  }
+  .heroContent {
+    width: 100%;
 
-	}
-	.contentEvento{
-		background-image: linear-gradient(to top, rgb(0, 0, 0) 75%, rgba(0, 0, 0, 0));
-		z-index: 1;
-		height: fit-content;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: flex-start;
-		gap: 20px;
-		padding: 0px 30px;
-		padding-bottom: 40px;
-		padding-top: 50px;
-		box-sizing: border-box;
-		border-radius: 0px 0px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .titulo {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    z-index: 1;
+  }
+  .titulo h1 {
+    margin: 0px;
+    font-size: 3.5rem;
+    font-family: "PublicBlack", sans-serif;
+    font-weight: 900;
+  }
+  .titulo p {
+    margin: 0px;
+    font-family: "PublickRegular", sans-serif;
+    font-weight: 400;
+  }
+  .arrow {
+    color: white;
+    font-size: 3rem;
+    padding: 40px;
+  }
+  .eventos {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .eventoContainer {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    border: 3px solid white;
+    border-radius: 40px;
+    width: 250px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .eventoImgContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  .eventoImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    border-radius: 40px 40px 0px 0px;
+  }
+  .eventoImg.corpo {
+    object-position: left;
+  }
+  .contentEvento {
+    background-image: linear-gradient(
+      to top,
+      rgb(0, 0, 0) 75%,
+      rgba(0, 0, 0, 0)
+    );
+    z-index: 1;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0px 30px;
+    padding-bottom: 40px;
+    padding-top: 50px;
+    box-sizing: border-box;
+    border-radius: 0px 0px 40px 40px;
+  }
+  .eventoContainer .contentEvento h2 {
+    margin: 0px;
+    color: white;
+    font-size: 1.5rem;
+    font-family: "PublicBold", sans-serif;
+    font-weight: 700;
+  }
+  .eventoContainer .contentEvento .textoEvento {
+    color: white;
+    margin: 0px;
+    height: 100px;
+    font-family: "PublicRegular", sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+  .eventoContainer .contentEvento a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    font-size: 1.5rem;
+  }
+  .eventoContainer .contentEvento a:hover {
+    color: black;
+    background-color: white;
+  }
 
-	}
-	.eventoContainer .contentEvento h2{
-		
-		margin: 0px;
-		color: white;
-		font-size: 1.5rem;
-		font-family: 'PublicBold', sans-serif;
-		font-weight: 700;
-	}
-	.eventoContainer .contentEvento .textoEvento{
-		color: white;
-		margin: 0px;
-		height: 100px;
-		font-family: 'PublicRegular', sans-serif;
-		font-weight: 400;
-		font-size: 0.8rem;
-	}
-	.eventoContainer .contentEvento a{
-		text-decoration: none;
-		color: rgb(255, 255, 255);
-		background-color: rgb(0, 0, 0);
-		border: 1px solid white;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 50px;
-		width: 50px;
-		border-radius: 100%;
-		font-size: 1.5rem;
-	}
-	.eventoContainer .contentEvento a:hover{
-		color: black;
-		background-color: white;
-
-	}
-
-	@media screen and (max-width: 1024px) {
-        .eventoContainer{
-		width: 280px;
-		height: 400px;
-		
-	}
-	.contentEvento{
-		gap: 10px;
-		padding: 0px 20px;
-		padding-bottom: 20px;
-		padding-top: 30px;
-
-	}
-	.eventoContainer .contentEvento .textoEvento{
-		color: white;
-		margin: 0px;
-		height: 80px;
-		font-family: 'PublicRegular', sans-serif;
-		font-weight: 400;
-		font-size: 0.8rem;
-	}
-
-        .titulo h1{
-		margin: 0px;
-		font-size: 2.5rem;
-		font-family: 'PublicBlack', sans-serif;
-		font-weight: 900;
-	}
-	.titulo p{
-		margin: 0px;
-		font-family: 'PublickRegular', sans-serif;
-		font-weight: 400;
-	}
+  @media screen and (max-width: 1024px) {
+    .backgroundImageContainer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 700px;
+      z-index: 0;
+      padding-top: 0px;
     }
-    @media screen and (max-width: 768px) {
-		main{
-			padding-bottom: 50px;
-		}
-		.heroContainer{
-			margin-top: 200px;
-		}
-		.titulo h1{
-			font-size: 2rem;
-			padding-bottom: 10px;
-		}
-        .eventos{
-			flex-direction: column;
-			align-items: center;
+    .eventoContainer {
+      width: 280px;
+      height: 400px;
+    }
+    .contentEvento {
+      gap: 10px;
+      padding: 0px 20px;
+      padding-bottom: 20px;
+      padding-top: 30px;
+    }
+    .eventoContainer .contentEvento .textoEvento {
+      color: white;
+      margin: 0px;
+      height: 80px;
+      font-family: "PublicRegular", sans-serif;
+      font-weight: 400;
+      font-size: 0.8rem;
+    }
 
-		}
-		.eventoContainer{
-			width: 90%;
-			height: 350px;
-		}
-		.contentEvento{
-			width: 100%;
-		}
-		.eventoContainer .contentEvento .textoEvento{
-		font-size: 1.1rem;
-	}
-		
-	
-	.eventoContainer .contentEvento a{
-		background-color: rgb(255, 255, 255);
-		color: black;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 35px;
-		width: 35px;
-		border-radius: 20px;
-		font-size: 1rem;
-		
-	}
-	.eventoContainer .contentEvento a:hover{
-		color: rgb(255, 255, 255);
-		background-color: rgb(0, 0, 0);
+    .titulo h1 {
+      margin: 0px;
+      font-size: 2.5rem;
+      font-family: "PublicBlack", sans-serif;
+      font-weight: 900;
+    }
+    .titulo p {
+      margin: 0px;
+      font-family: "PublickRegular", sans-serif;
+      font-weight: 400;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    main {
+      padding-bottom: 50px;
+    }
+    .heroContainer {
+      margin-top: 200px;
+    }
+    .titulo h1 {
+      font-size: 2rem;
+      padding-bottom: 10px;
+    }
+    .eventos {
+      flex-direction: column;
+      align-items: center;
+    }
+    .eventoContainer {
+      width: 90%;
+      height: 350px;
+    }
+    .contentEvento {
+      width: 100%;
+    }
+    .eventoContainer .contentEvento .textoEvento {
+      font-size: 1.1rem;
+    }
 
-	}
-	
-        
-}
+    .eventoContainer .contentEvento a {
+      background-color: rgb(255, 255, 255);
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 35px;
+      width: 35px;
+      border-radius: 20px;
+      font-size: 1rem;
+    }
+    .eventoContainer .contentEvento a:hover {
+      color: rgb(255, 255, 255);
+      background-color: rgb(0, 0, 0);
+    }
+  }
 </style>

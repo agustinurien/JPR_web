@@ -194,7 +194,6 @@
     font-size: 1rem;
   }
   .contactContainer {
-    background-color: rgb(255, 255, 255);
     padding: 20px 20px;
     width: 100%;
     justify-content: space-between;
@@ -202,9 +201,7 @@
   .wpButton {
     display: none;
   }
-  .whatsappIcon {
-    font-size: 2rem;
-  }
+
   span {
     font-size: 0.5rem;
   }

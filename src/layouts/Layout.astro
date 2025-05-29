@@ -1,86 +1,103 @@
 ---
-import { FaWhatsapp } from 'react-icons/fa';
-import Footer from '../components/Layout/Footer.astro';
-import Navbar from '../components/Layout/Navbar.astro';
+import { FaWhatsapp } from "react-icons/fa";
+import Footer from "../components/Layout/Footer.astro";
+import Navbar from "../components/Layout/Navbar.astro";
 ---
-
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/JPR_FAVICON.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>JPR - Tecnicas para espectaculos</title>
-	</head>
-	<body>
-		<Navbar />
-		<slot />
-		<div class="contactContainer">
-			<a href="https://wa.me/5491150169540" class="whatsappIcon">
-			  <FaWhatsapp />
-			</a>
-		  </div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/JPR_FAVICON.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>JPR - Tecnicas para espectaculos</title>
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+    <div class="contactContainer">
+      <a href="https://wa.me/5491150169540" class="whatsappIcon">
+        <FaWhatsapp />
+      </a>
+    </div>
+  </body>
 </html>
 
+<script>
+  if (window.location.pathname === "/") {
+    const contactContainer = document.querySelector(".contactContainer");
+    if (contactContainer) {
+      contactContainer.style.display = "none";
+    }
+  }
+</script>
+
 <style is:global>
-	html{
-		scroll-behavior: smooth;
-	}
-	body{
-		position: relative;
-		margin: 0;
-	}
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    position: relative;
+    margin: 0;
+  }
 
-	.contactContainer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 150px 40px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  color: black;
-  box-sizing: border-box;
-}
-.whatsappIcon {
-  font-size: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #7ac942;
-  color: white;
-  padding: 15px 15px;
-  border-radius: 100%;
-}
+  .contactContainer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 150px 40px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: black;
+    box-sizing: border-box;
+  }
+  .whatsappIcon {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7ac942;
+    color: white;
+    padding: 15px 15px;
+    border-radius: 100%;
+  }
 
-	@font-face {
-		font-family: 'PublicRegular', sans-serif;
-		src: url('/fonts/PublicSans-Regular.ttf') format('truetype');
-		font-weight: 400;
-		font-style: normal;
-	}
-	@font-face {
-  font-family: 'PublicBold';
-  src: url('/fonts/PublicSans-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
+  @font-face {
+    font-family: "PublicRegular", sans-serif;
+    src: url("/fonts/PublicSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "PublicBold";
+    src: url("/fonts/PublicSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
 
-@font-face {
-  font-family: 'PublicBlack';
-  src: url('/fonts/PublicSans-Black.ttf') format('truetype');
-  font-weight: 800; /* <-- Corregido: era font-size por error */
-  font-style: normal;
-}
+  @font-face {
+    font-family: "PublicBlack";
+    src: url("/fonts/PublicSans-Black.ttf") format("truetype");
+    font-weight: 800; /* <-- Corregido: era font-size por error */
+    font-style: normal;
+  }
 
-@font-face {
-  font-family: 'ChivoMonoSB';
-  src: url('/fonts/ChivoMono-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
+  @font-face {
+    font-family: "ChivoMonoSB";
+    src: url("/fonts/ChivoMono-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+  }
+  @media screen and (max-width: 768px) {
+    .contactContainer {
+      padding: 120px 20px;
+    }
+    .whatsappIcon {
+      font-size: 2rem;
+      padding: 10px 10px;
+    }
+  }
 </style>
